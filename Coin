@@ -1,0 +1,18 @@
+class Coin
+{
+  private float posx;
+  private float posy;
+
+  Coin(float x, float y)
+  {
+    this.posx = x;
+    this.posy = y;
+  }
+
+  void show()
+  {
+    ellipse(posx, posy, 30, 30);
+  }
+
+  
+}
