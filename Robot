@@ -1,0 +1,36 @@
+class Robot
+{
+  
+  private float posx;
+  private float posy;
+  private float vel = 10;
+  private int amountCoinsCollected = 0;
+  
+  Robot(float x, float y)
+  {
+    this.posx = x;
+    this.posy = y;
+  }
+  
+  void move(float x, float y)
+  {
+    x *= 60;
+    y *= 60;
+    this.posx += x;
+    this.posy += y;
+  }
+
+  void show()
+  {
+    fill(100);
+    rect(posx+10, posy+10, 40, 40);
+    fill(255);
+    textSize(10);
+    text(amountCoinsCollected, posx+20, posy+20);
+  }
+  
+  void increaseCounter()
+  {
+    amountCoinsCollected++;
+  }
+}
